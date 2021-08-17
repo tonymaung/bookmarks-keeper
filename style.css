@@ -213,7 +213,11 @@ button:focus{
 }
 /* Media Query:Large Smartphone 600px */
 @media screen  and (max-width:600px){
+     body{
+	 overflow-y: auto;     
+     }
     .container{
         flex-direction: column;
     }
+	
 }
