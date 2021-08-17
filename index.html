@@ -7,10 +7,110 @@
     <title>Bookmarks Keeper</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
+
 <body>
-    
+    <!-- Open Modal -->
+    <h1 id="show-modal">Add Bookmark</h1>
+    <!-- Bookmarks -->
+    <div class="container" id="bookmarks-container">
+        <!-- Default Item -->
+        <!-- <div class="item">
+            <i class="far fa-edit" id="edit-bookmark"></i>
+            <i class="far fa-trash-alt" id="delete-bookmark" title="delete"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=www.youtube.com" alt="Favicon">
+                <a href="https://www.youtube.com" target="_blank">Youtube</a>
+            </div>
+        </div>
+        <div class="item">
+            <i class="far fa-edit" id="edit-bookmark"></i>
+            <i class="far fa-trash-alt" id="delete-bookmark" title="delete"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=www.twitter.com" alt="Favicon">
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                
+            </div>
+        </div>
+        <div class="item">
+            <i class="far fa-edit" id="edit-bookmark"></i>
+            <i class="far fa-trash-alt" id="delete-bookmark" title="delete"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=www.reddit.com" alt="Favicon">
+                <a href="https://www.reddit.com" target="_blank">Reddit</a>
+            </div>
+        </div> -->
+    </div>
+    <!-- Modal -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <i class="fas fa-times-circle close-icon" id="close-modal" title="close-modal"></i>
+            <div class="modal-header">
+                <h3>Add Bookmark</h3>
+            </div>
+            <div class="modal-content">
+                <form id="bookmark-form">
+                    <!-- Website Name -->
+                    <div class="form-group">
+                        <label for="website-name" class="form-label">Website Name</label>
+                        <input class="form-input" type="text" id="website-name">
+                    </div>
+                    <!-- Website URL -->
+                    <div class="form-group">
+                        <label for="website-url" class="form-label">Website URL</label>
+                        <input class="form-input" type="text" id="website-url">
+                    </div>
+                    <button class="" type="submit">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="edit modal-container" id="edit-modal">
+        <div class="modal">
+            <i class="fas fa-times-circle close-icon" id="close-edit-modal" title="close-edit-modal"></i>
+            <div class="modal-header">
+                <h3>Edit Bookmark</h3>
+            </div>
+            <div class="edit-modal modal-content">
+                <form id="edit-bookmark-form">
+                    <!-- Website Name -->
+                    <div class="form-group">
+                        <label for="website-name" class="form-label">Website Name</label>
+                        <input class="form-input" type="text" id="edit-website-name">
+                    </div>
+                    <!-- Website URL -->
+                    <div class="form-group">
+                        <label for="website-url" class="form-label">Website URL</label>
+                        <input class="form-input" type="text" id="edit-website-url">
+                    </div>
+                    <button class="" type="submit">Edit</button>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- JS Script -->
     <script src="app.js"></script>
 </body>
+
 </html>

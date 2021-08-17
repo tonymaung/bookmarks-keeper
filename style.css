@@ -1,0 +1,218 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+/* Global Variables */
+:root{
+    --primary:#261C2C;
+    --border-radius:5px;
+}
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background-color: var(--primary);
+	background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0C6.716 0 0 6.716 0 15c8.284 0 15-6.716 15-15zM0 15c0 8.284 6.716 15 15 15 0-8.284-6.716-15-15-15zm30 0c0-8.284-6.716-15-15-15 0 8.284 6.716 15 15 15zm0 0c0 8.284-6.716 15-15 15 0-8.284 6.716-15 15-15z' fill='%23f3f3f3' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    font-family: Noto Serif JP, serif;
+    overflow-y: hidden;
+}
+h1{
+    color: azure;
+    padding: 20px;
+    background:rgba(0,0,0,0.5);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 275px;
+    margin: 20px auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    text-align: center;
+}
+h1:hover{
+    filter: brightness(80%);
+}
+/* Bookmarks*/
+
+.container  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    object-fit: scale-down;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(0,0,0,0.5);
+    color: seashell;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.7);
+}
+
+.item:hover{
+    background: rgba(0,0,0,0.7);
+}
+
+.item a{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.item a:link,a:visited{
+    text-decoration: none;
+    color: seashell;
+}
+.item a:hover, a:active{
+    text-decoration: underline;
+    opacity: 0.5;
+}
+.name img{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    vertical-align: sub;
+}
+.name{
+    margin-right: 40px;
+    min-width: 120px;
+}
+/* Edit Icon */
+.fa-edit{
+    z-index: 2;
+    cursor: pointer;
+    vertical-align: sub;
+    height: 20px;
+    width: 20px;
+    margin-left: 0px;
+    margin-top: 5px;
+    margin-right:10px ;
+    order: 4;
+
+}
+/* Trash Icon */
+.fa-trash-alt{
+    z-index: 2;
+    cursor: pointer;
+    vertical-align: sub;
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+    order: 5;
+
+}
+.fa-edit:hover, .fa-trash-alt:hover{
+    filter: brightness(0.5);
+}
+/* Dim icon bright Icons */
+.dim-icons{
+    opacity: 0.4;
+    pointer-events: none;
+}
+.bright-icons{
+    opacity: 1;
+    pointer-events: auto;
+}
+/* Modal Styling */
+.modal-container{
+    background: rgba(0,0,0,0.4);
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--border-radius);
+}
+.show-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    max-width: 95%;
+    width: 500px;
+    border-radius: var(--border-radius);
+    animation: modalopen 2.5s;
+}
+.close-icon{
+    color: beige;
+    float: right;
+    font-size: 24px;
+    position: relative;
+    top: 13px;
+    right: 13px;
+    cursor: pointer;
+}
+.modal-header{
+    background-color: var(--primary);
+    color: beige;
+    padding: 15px;
+}
+h3{
+    margin: 0;
+}
+.modal-content{
+    padding: 20px;
+    background: whitesmoke;
+}
+/* Form */
+.form-group{
+    height: 55px;
+}
+.form-input{
+    width: 95%;
+    padding: 5px;
+    border: 2px solid var(--primary);
+    border-radius: var(--border-radius);
+    caret-color: var(--primary);
+    display: block;
+    outline: none;
+}
+.form-input:active{
+    filter: brightness(120%);
+}
+.form-label{
+    color: var(--primary);
+    font-weight: 900;
+    display: block;
+}
+button{
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: var(--primary);
+    height: 30px;
+    width: 100px;
+    border-radius: var(--border-radius);    
+    border: none;
+    margin: 15px auto 0px;
+}
+button:hover{
+    filter: brightness(120%);
+}
+button:focus{
+    outline: none;
+}
+@keyframes modalopen {
+    from{
+        opacity: 0;
+    } 
+    to{
+        opacity: 1;
+    }
+}
+/* Media Query:Large Smartphone 600px */
+@media screen  and (max-width:600px){
+    .container{
+        flex-direction: column;
+    }
+}
